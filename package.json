@@ -2,7 +2,8 @@
   "name": "hono",
   "type": "module",
   "dependencies": {
-    "hono": "^4.8.9"
+    "hono": "^4.8.9",
+    "mysql2": "^3.11.3"
   },
   "devDependencies": {
     "@types/node": "^20.11.17",

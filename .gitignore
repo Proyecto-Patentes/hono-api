@@ -27,3 +27,10 @@ lerna-debug.log*
 # misc
 .DS_Store
 .vercel
+
+# -------------------------
+# Environment variables
+# -------------------------
+.env
+.env.*
+!.env.example

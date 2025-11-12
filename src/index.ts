@@ -1,14 +1,15 @@
-import { Hono } from 'hono'
+import { Hono } from "hono";
+import plateRoutes from "./routes/plate";
+import reportRoutes from "./routes/report";
 
-const app = new Hono()
+const app = new Hono();
 
-const welcomeStrings = [
-  "Hello Hono!",
-  "To learn more about Hono on Vercel, visit https://vercel.com/docs/frameworks/backend/hono",
-]
+app.get("/", (c) => c.text("API running"));
 
-app.get('/', (c) => {
-  return c.text(welcomeStrings.join('\n\n'))
-})
+app.route("/plate", plateRoutes);
+app.route("/report", reportRoutes);
 
-export default app
+// Forzamos runtime Node.js (no Edge) para mysql2
+export const config = { runtime: "nodejs" };
+
+export default app;
