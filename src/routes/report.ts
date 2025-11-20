@@ -1,5 +1,5 @@
 import { Hono } from "hono";
-import { getPool } from "../db";
+import { getPool } from "../db.js";
 
 const router = new Hono();
 
